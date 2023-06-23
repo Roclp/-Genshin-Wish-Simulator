@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="原神怎么你了？？？">
+    <meta name="keywords" content="原神,厂白小神,厵神,OP">
+    <title>原神抽卡模拟器v2.2（网页版）</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/setting.css">
+    <link rel="stylesheet" href="css/video.css">
+    <script src="js/vue.js"></script>
+    <script src="js/main.js"></script>
+    <link rel="icon" type="image/x-icon" href="src/img/logo.png">
+</head>
+<body>
+    <div class="box">  
+        <!-- 这是第一个视频的容器（暂未使用） -->
+        <div id="videoTank">       
+            <video id="starVideo"></video>
+            <div id="videoHat" ></div>
+        </div>
+
+        <!-- 这是第二个视频的容器 -->
+        <div id="videoContainer">
+            
+            <video id="myVideo"></video>
+            <!-- <video id="myVideo myVideo1"></video>
+            <video id="myVideo myVideo2"></video>
+            <video id="myVideo myVideo3"></video>
+            <video id="myVideo myVideo4"></video>
+            <video id="myVideo myVideo5"></video>
+            <video id="myVideo myVideo6"></video>
+            <video id="myVideo myVideo7"></video>
+            <video id="myVideo myVideo8"></video>
+            <video id="myVideo myVideo9"></video>
+            <video id="myVideo myVideo10"></video> -->
+            <div id="videoMask" ></div>
+           
+        </div>
+        <div id="float-window">
+            <h3>请选择五星up角色</h3>
+            <ul class="choose_5">
+                <li><label><input type="radio" name="radio-option" value="1" checked> 神里绫华</label></li>
+                <li><label><input type="radio" name="radio-option" value="2"> 可莉</label></li>
+                <li><label><input type="radio" name="radio-option" value="3"> 珊瑚宫心海</label></li>
+                <li><label><input type="radio" name="radio-option" value="4"> 雷电将军</label></li>
+                <li><label><input type="radio" name="radio-option" value="5"> 温迪</label></li>
+                <li><label><input type="radio" name="radio-option" value="6"> 钟离</label></li>
+                <li><label><input type="radio" name="radio-option" value="7"> 胡桃</label></li>
+                <li><label><input type="radio" name="radio-option" value="8"> 枫原万叶</label></li>
+                <li><label><input type="radio" name="radio-option" value="9"> 甘雨</label></li>
+                <li><label><input type="radio" name="radio-option" value="10"> 魈</label></li>
+
+            </ul>
+            <h3>请选择四星up角色（限选3个）</h3>
+            <ul class="choose_4">
+                <li><label><input type="checkbox" name="checkbox-option" value="1"> 芭芭拉</label></li>
+                <li><label><input type="checkbox" name="checkbox-option" value="2"> 九条裟罗</label></li>
+                <li><label><input type="checkbox" name="checkbox-option" value="3" checked> 雷泽</label></li>
+                <li><label><input type="checkbox" name="checkbox-option" value="4"> 迪奥娜</label></li>
+                <li><label><input type="checkbox" name="checkbox-option" value="5"> 砂糖</label></li>
+                <li><label><input type="checkbox" name="checkbox-option" value="6"> 托马</label></li>
+                <li><label><input type="checkbox" name="checkbox-option" value="7"> 班尼特</label></li>
+                <li><label><input type="checkbox" name="checkbox-option" value="8" checked> 早柚</label></li>
+                <li><label><input type="checkbox" name="checkbox-option" value="9"> 诺艾尔</label></li>
+                <li><label><input type="checkbox" name="checkbox-option" value="10"> 辛焱</label></li>
+                <li><label><input type="checkbox" name="checkbox-option" value="11"> 菲谢尔</label></li>
+                <li><label><input type="checkbox" name="checkbox-option" value="12"> 烟绯</label></li>
+                <li><label><input type="checkbox" name="checkbox-option" value="13"> 重云</label></li>
+                <li><label><input type="checkbox" name="checkbox-option" value="14"> 行秋</label></li>
+                <li><label><input type="checkbox" name="checkbox-option" value="15" checked> 罗莎莉亚</label></li>
+                <li><label><input type="checkbox" name="checkbox-option" value="16"> 香菱</label></li>
+                <li><label><input type="checkbox" name="checkbox-option" value="17"> up主</label></li>
+                <li><label><input type="checkbox" name="checkbox-option" value="18"> 亖掉的up主</label></li>
+            </ul>
+            <button id="confirm-btn" type="submit" value="Submit">我选好啦</button>
+        </div>          
+        <div class="button">
+            <div id="type01" class="type1">
+                <img class="assistant" src="src/img/assistant.png" v-on:click="handle1()" />
+                <img id="details" class="details" src="src/img/details.png" />
+                <img class="history" src="src/img/history.png" v-on:click="handle2()"/>
+            </div>
+            <div class="type2">
+                <img class="pray_once" src="src/img/pray_once.png" v-on:click="handle3()"/> <!--onclick="playVideo('src/img/star/prayvideo.mp4')" -->
+                <img class="pray_tenth" src="src/img/pray_tenth.png" v-on:click="handle4()"/>  <!--onclick="playVideo('src/img/star/prayvideo.mp4')" -->
+            </div>
+            <div class="type3">
+                <img class="yuanpbutton" src="src/img/yuanpbutton.png" v-on:click="handle5()"/>
+            </div>
+        </div>
+    </div>
+    
+      
+
+
+
+    <script src="js/pray.js"></script>
+    <script src="js/help.js"></script>
+    <!-- <script src="js/show.js"></script> -->
+    <script src="js/setting.js"></script>
+    <script src="js/video.js"></script>
+    <script src="js/sound.js"></script>
+</body>
+</html>

@@ -1,0 +1,67 @@
+#float-window {
+    color: #fff;
+    display: none; /* 默认隐藏浮窗 */
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 400px;
+    height: 485px;
+    background: url(../src/img/testscene.png) no-repeat;
+    border: 1px solid #000000;
+    box-shadow: 0 0 40px rgba(0, 0, 0, 0.4);
+    padding: 10px;
+    border-radius: 5px;
+    /* opacity: 0; 添加透明度为0，即初始状态为完全透明 */
+    /* transition: opacity 1s ease-in-out; 添加过渡效果 */
+  }
+
+    #float-window.show {
+        display: block; /* 显示浮窗 */
+        transition: opacity 1s ease-in-out; /* 添加过渡效果 */
+    }
+
+    #float-window h3 {
+        margin-left: 10px;
+        margin-top: 10px;
+    }
+
+    .choose_5{
+        margin: 5px 0px 10px 0px;
+        display:flex; 
+        flex-wrap:wrap; 
+        justify-content:center;
+    }
+    .choose_5 li { 
+        width:45%; 
+        margin:5px;
+        display:inline-block; 
+    }
+    .choose_5 label { 
+        display:block; 
+    }
+
+    .choose_4{
+        margin: 5px 5px 10px 5px;    
+        display:flex; 
+        flex-wrap:wrap; 
+        justify-content:center;
+    }
+    .choose_4 li { 
+        width:30%; 
+        margin:5px; 
+        display:inline-block; 
+    }
+    .choose_4 label { 
+        display:block; 
+    }
+
+    #float-window #confirm-btn{
+        display: block;
+        margin: 15px auto;
+        font-size: 16px;
+        padding: 10px 20px;
+        width: 180px;
+        cursor: pointer;
+    }
+    

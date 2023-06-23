@@ -1,0 +1,67 @@
+#videoContainer {
+    display: none; 
+    position: absolute;
+    top: 0%;
+    left: 0%;
+    width: 100%;
+    height: 100%;
+    background-color: #000;
+    z-index: 100;
+}
+
+#videoContainer.show {
+    display: block; 
+} 
+
+#myVideo {
+    width: 100%;
+    height: 100%;
+    position: relative; 
+}
+
+#videoMask {
+    width: 100%;
+    height: 100%;
+    position: absolute; /* 必须设置 */
+    top: 0;
+    left: 0;
+    background-color: rgba(0,0,0,0);
+    /* cursor: pointer;  */
+    /* font-size: 200px; */
+    color: #fcfcfc;
+    z-index: 105;
+}
+
+#videoTank {
+    display: none; 
+    position: absolute;
+    top: 0%;
+    left: 0%;
+    width: 100%;
+    height: 100%;
+    background-color: #000;
+}
+
+#videoTank.show {
+    display: block; 
+} 
+
+#starVideo {
+    width: 100%;
+    height: 100%;
+    position: relative; 
+}
+
+#videoHat {
+    width: 100%;
+    height: 100%;
+    position: absolute; /* 必须设置 */
+    top: 0;
+    left: 0;
+    background-color: rgba(0,0,0,0);
+    /* cursor: pointer;  */
+    /* font-size: 200px; */
+    color: #fcfcfc;
+    z-index: 5;
+}
+      
